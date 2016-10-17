@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Bicicletas Online · Los Mejores Precios | Bicimarket.com</title>
+	<link href="css/propio.css" type="text/css" />
+</head>
+<body>
+	<form name="f1" action="proyecto1.php" method="GET">
+	<br/>
+	Fecha :
+		<input type="date" name="fecha"/>
+	<br/>
+	<br/>
+	Provincia :
+<select name="lugar" id="lugar">
+	
+	<optgroup label="Provincia">
+		<option value="Barcelona" >Barcelona</option>
+		<option value="Tarragona">Tarragona</option>
+		<option value="Lleida">Lleida</option>
+		<option value="Girona">Girona</option>
+	</optgroup>
+
+</select><br/>
+<br/>Marca Bici:
+<select name="marca" id="marca">
+<optgroup label="MARCA">
+	<option value="1" >Barcelona</option>
+	<option value="2">Tarragona</option>
+</optgroup>
+<optgroup label="MARCA2">
+	<option value="Lleida">Lleida</option>
+	<option value="Girona">Girona</option>
+</optgroup>
+</select>
+<br/><br/>Año bici: 
+	<select name="any" id="any">
+					<option value="nose" selected>No se de que año es</option>
+					<option value="2001">2001</option>
+					<option value="2002">2002</option>
+					<option value="2003">2003</option>
+					<option value="2004">2004</option>
+					<option value="2005">2005</option>
+					<option value="2006">2006</option>
+					<option value="2007">2007</option>
+					<option value="2008">2008</option>
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+					<option value="2014">2014</option>
+					<option value="2015">2015</option>
+					<option value="2016">2016</option>
+</select><br/>
+<br/>Numero Serie:
+<input type="text" name="numeroserie" id="numeroserie" size="10" maxlength="35"/><br/><br/>
+<input type="submit" value="Enviar"/>
+</body>
+</html>
