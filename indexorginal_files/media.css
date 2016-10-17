@@ -1,0 +1,229 @@
+
+/* Large desktop */
+@media (min-width: 1200px) {
+.menu-productos .dropdown-toggle{font-size:15px;}
+.dropdown:hover .dropdown-menu {
+    display: block;
+ }
+.producto .img-responsive{text-align:center; width:140px!important;} 
+ .selector-marca{overflow:auto; height:200px;}
+ 
+	 }
+@media (min-width: 980px) and (max-width: 1199px) {
+.sidebar .col-xs-12, .sidebar .col-sm-4, .sidebar .col-xs-6, .sidebar .col-md-12, .sidebar .col-lg-12{padding-left:10px;padding-right:10px; }
+.menu-productos .dropdown-toggle{font-size:15px;}
+.producto img:hover {opacity: 1;}
+.precios-ficha  .pvpr{display:block;}
+.precios-ficha  .descuento{display:block;border:none;padding-top:0px;padding-left:0px;}
+.selector-opciones{width:100%;float:none;margin-bottom:10px;}
+.res-compra{padding: 5px 10px 10px 10px;}
+.dropdown:hover .dropdown-menu {
+    display: block;
+ }
+ .selector-marca{overflow:auto; height:200px;}
+.producto .img-responsive{text-align:center; width:140px!important;} 
+}
+@media (min-width: 979px) and (max-width: 1040px) {
+#caja-nl{display:none}
+.precios-ficha  .pvpr{display:block;}
+.precios-ficha  .descuento{display:block;border:none;padding-top:0px;padding-left:0px;}
+.selector-opciones{width:100%;float:none;margin-bottom:10px;}
+.dropdown:hover .dropdown-menu {
+    display: block;
+ }
+ .selector-marca{overflow:auto; height:200px;}
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 	
+.menu-productos .dropdown-toggle{font-size:17px;}
+header .navbar-nav > li > a {padding: 5px 6px;}
+.sidebar .col-xs-12, .sidebar .col-sm-4, .sidebar .col-xs-6, .sidebar .col-md-12, .sidebar .col-lg-12{padding-left:10px;padding-right:10px; }
+
+/*ficha producto*/
+.producto img{float:left;width:50%;}
+.datos-producto{float:right;width:48%;}
+.producto{margin-bottom:20px;padding-right:0px;}
+.pvpr, .disponibilidad{min-height:0px;}
+.producto h3{min-height:0px;}
+.producto img:hover {opacity: 1;}
+.producto-destacado{margin-bottom:20px;}
+
+.contentHolder { height: 160px; }
+.precios-ficha  .pvpr{display:block;}
+.precios-ficha  .descuento{display:block;border:none;padding-top:0px;padding-left:0px;}
+.selector-opciones{width:100%;float:none;margin-bottom:10px;}
+.datos-producto-b{
+	border-left: none;
+	min-height: auto;
+}
+.producto-b .caja-botones{text-align:left;}
+.t-entrada-1{ text-align:left; margin-bottom:0px; }
+.t-entrada-2{border-left:none; padding:0px;}
+.res-compra{padding: 5px 10px 10px 10px;}
+ .selector-marca{overflow:auto; height:200px;}
+	 }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+.menu-productos li li {float:none; width:auto;}
+.producto img{margin:0px 10px 0px 0px;}
+.menu-productos .dropdown-toggle{font-size:17px;}
+.sel-marca {background-image: none;}
+.logo-mini-bmk{	float:left; width:80%;padding-top:10px;}
+.navbar-collapse{padding-left:15px;}
+.t-home, .t-mtb, .t-triatlon, .t-carretera, .t-triatlon, .t-fitness, .t-outlet, .t-tiendas{border-top:0px;}
+.navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header  {
+    padding: 0 0 10px 10px;
+	font-size:18px;
+}
+.navbar-right li  {padding: 0 0 10px 10px;}
+.registro-idiomas{ width:100%; font-size:16px;}
+
+.menu-productos{
+	background-color: #fff;	
+	}
+
+.buscar{width:79%;float:left}
+.buscar-2{width:20%;float:right}
+.desc-1{width:73%;float:left}
+.desc-2{width:25%;float:right}
+.logo-carro{margin-top:-20px;}
+.navbar-toggle {margin-right: 0px;border-radius:2px;}
+.menu-productos .navbar-toggle {margin-top: 0px; width:100%;}
+.bot-carro-sup{ width:99%; margin-bottom: 6px; padding: 6px;}
+.bot-carro-sup_gr{background-color: #f29400;}
+.carro-compra.dropdown-toggle{text-align: right; width:100%; padding: 0;}
+.link-carro{float:none;}
+/*ficha producto*/
+.producto img{float:left;width:40%;padding: 0 10px;}
+.datos-producto{float:right;width:58%;}
+.producto{margin-bottom:0px;padding-right:0px;}
+.pvpr, .disponibilidad{min-height:0px;}
+.producto h3{min-height:0px;}
+.producto img:hover {opacity: 1;}
+.producto-destacado{margin-bottom:20px;}
+.contentHolder { height: 300px; }
+#texto-ficha{padding-left:0px; padding-right:0px;}
+.datos-producto-b{
+	border-left: none;
+	min-height: auto;
+}
+.producto-b .caja-botones{text-align:left;}
+
+.l-stock, .l-grat, .l-inm, .l-fina{
+	background-image:none; padding-left:5px!important;padding-right:5px!important;line-height:12px; border-right: 1px solid #d9d9d9;
+}
+
+.datos-producto-b li:last-child{border-right: none;}
+
+.producto-b .caja-botones{text-align:left;}
+.t-entrada-1{ text-align:left; margin-bottom:0px; }
+.t-entrada-2{border-left:none; padding:0px;}
+.t-ven-att, .t-ven-auto, .t-ven-bici, .t-ven-fin, .t-ven-marc, .t-ven-ofertas, .t-ven-portes, .t-ven-precio, .t-ven-taller{display:none;}
+.t-ventajas-lista li{min-height: 25px; padding:0px 10px;}
+.v-list-envio{padding-bottom:0px!important;}
+.res-compra{padding: 5px 10px 10px 10px;}
+.regis-identi .col-md-6{margin-bottom: 100px!important;}
+	}
+@media (min-width: 480px) and (max-width: 595px)  { 
+.footer-ventajas .ven-gran{font-size:18px; line-height:18px;}
+.footer-ventajas li{width:100%!important;height:40px; padding-top:10px; }
+.regis-identi .col-md-6{margin-bottom: 100px!important;}
+	}
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+
+.logo-bmk{width:100%;}
+.navbar-collapse{padding-left:15px;}
+.t-home, .t-mtb, .t-triatlon, .t-carretera, .t-triatlon, .t-fitness, .t-outlet, .t-tiendas{border-top:0px;}
+
+.familias li{border-right: none;font-family: 'robotolight';font-size:18px;color:#333;
+}
+.navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header  {
+        padding: 0 0 10px 10px;
+	font-size:18px;
+}
+
+.navbar-right li  {padding: 0 0 10px 10px;}
+.registro-idiomas{ width:100%; font-size:16px;}
+
+.menu-productos{
+	background-color: #fff;	
+	}
+.sel-marca {background-image: none;}
+.buscar{width: 85%;float:left}
+.buscar-2{width:15%;float:right}
+.logo-carro{margin-top:-20px;}
+.navbar-toggle {margin-right: 0px;border-radius:2px;}
+.footer-ventajas{font-size:15px;line-height:25px; margin:0px auto;padding:10px;}
+.footer-ventajas .ven-gran{font-size:15px;}
+.footer-ventajas li{width:100%!important;height:40px;}
+.v-financiacion .ven-gran{padding:0px 0px 0px 0px;}	
+.ven-gran{font-size:18px;}
+.desc-1{width:70%;float:left}
+.desc-2{width:25%;float:right}
+.menu-productos .dropdown-toggle{font-size:18px;}
+.btn-cancelar{margin-bottom:10px;}
+.v-envio{line-height:20px;height:58px!important; padding-left:30px!important; padding-bottom:60px!important;}
+
+
+/*ficha producto*/
+.producto img{float:left;width:48%;}
+.datos-producto{float:right;width:48%;}
+.bot-comprar-lista, .bot-info{font-size:11px; padding:4px;margin-right:2px;}
+.precio,.descuento{font-size: 16px;font-weight: bold;}
+.precio{padding-right:5px;}
+.descuento{padding-left:5px;}
+.producto {margin-bottom:20px;padding-right:0px;}
+.pvpr, .disponibilidad{min-height:0px;}
+.producto h3{min-height:0px;}
+.producto img:hover {opacity: 1;}
+.producto-destacado{margin-bottom:20px;min-height:0px;}
+.producto-destacado .descuento{font-size:22px;line-height:25px;}
+.producto-destacado .precio{font-size:25px;line-height:25px;}
+.producto-destacado  .desc-breve{font-size:14px;line-height:16px;}
+#texto-ficha{padding-left:0px; padding-right:0px;}
+
+.rating-input{font-size:20px;margin:0px;padding:0px;line-height:20px;}
+.rating-clear{font-size:12px;}
+.p-financia{display:block;clear:both;overflow:hidden;}
+
+#mi-cuenta li{
+	font-size:11px;
+	border:0px;
+}
+.datos-producto-b{
+	border-left: none;
+	min-height: auto;
+}
+.producto-b .caja-botones{text-align:left;}
+
+
+.l-stock, .l-grat, .l-inm, .l-fina{
+	background-image:none; padding-left:0px!important;line-height:12px;
+}
+
+.datos-producto-b li:last-child{border-right: none;}
+
+.producto-b .caja-botones{text-align:left;}
+.t-entrada-1{ text-align:left; margin-bottom:0px; }
+.t-entrada-2{border-left:none; padding:0px;}
+.t-ven-att, .t-ven-auto, .t-ven-bici, .t-ven-fin, .t-ven-marc, .t-ven-ofertas, .t-ven-portes, .t-ven-precio, .t-ven-taller{background:none; padding:0px 10px!important;}
+.t-ventajas-lista{min-height: 25px;padding:0px 10px!important;}
+.v-list-envio{padding-bottom:60px!important;}
+.res-compra{padding: 5px 10px 10px 10px;}
+
+.regis-identi .col-md-6{margin-bottom: 100px!important;}
+
+/*botones mas grandes en movill*/
+
+ .bot-comprar-lista, .bot-info{font-size:18px!important; margin-bottom:10px!important;}
+
+.foot-enlaces li{padding:10px 0px!important;}
+
+.caja-descripcion img,
+.caja-descripcion iframe{
+    max-width:100%;
+}
+
+}

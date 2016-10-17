@@ -1,0 +1,18 @@
+/* COLORES UTILIZADOS*/
+/* TEXTO PRINCIPAL: #333*/
+/* BORDES: #a1a1a1*/
+/* BORDES2: #d9d9d9*/
+
+/* e-general:#f29400 */
+/* MTB:#edcc00 */
+/* Carretera: #f29400 */
+/* Triatlon: #5baf44 */
+/* Fitness:#833286 */
+/* Outlet:#c4081c */
+/* Tiendas:#e56d03 */                         
+#newsletter, .buscar-2{color:#FFF;background-color: #f29400!important;}
+h1, h2{border-bottom-color: #f29400;}
+.tiendas a, .t-entrada-1, .estatica a, .contacto a, .carro-head, .modal-header h4, .opc-producto h4,  #texto-ficha h4{color: #f29400;}
+.destacado, .form-newsletter a, .precios-ficha .descuento{font-weight: bold!important;color: #f29400;}
+#mi-cuenta li a, .carro-head, .producto-destacado h3{color: #f29400;}
+.separador{border-top-color:#f29400;}
