@@ -3,16 +3,72 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Bicicletas Online · Los Mejores Precios | Bicimarket.com</title>
-	<link href="css/propio.css" type="text/css" />
+
+
+	<script>
+	function validar(){
+
+		var error="Los siguientes campos no son correctos:\n";
+
+	
+
+		//validación de la fecha
+		if(document.f1.fecha_min.value==""){
+			error+="La fecha minima es requerida\n";
+		}
+		if(document.f1.fecha_max.value==""){
+			error+="La fecha maxima es requerida\n";
+		}
+
+		if(document.f1.lugar.value==""){
+			error+="El lugar es requerido\n";
+		}
+		//validación de la marca
+		if(document.f1.marca.value==""){
+			error+="La marca es requerida\n";
+		}
+		//validación del modelo
+		if(document.f1.modelo.value==""){
+			error+="El modelo es requerido\n";
+		}
+		//validación del color
+		if(document.f1.color.value==""){
+			error+="El color es requerido\n";
+		}
+	//validación del numero de serie
+	/*
+		if((document.f1.numeroserie.value!="") ||(document.f1.numeroserie.value.length!=15))
+
+
+		{
+			
+		error+="El numero de serie que introduce no es correcto\n";				
+			
+		}*/
+
+
+		if(error=="Los siguientes campos no son correctos:\n"){
+			return true;
+		} else {
+			alert(error);
+			return false;
+		}
+	}
+
+	</script>
 </head>
 <body>
-	<form name="f1" action="proyecto1.php" method="GET">
+	<form name="f1" action="proyecto1.php" method="GET" onsubmit="return validar();">
 	<br/>
-	Fecha :
-		<input type="date" name="fecha"/>
+	Fecha del robo:<br/><br/>
+		<TABLE>
+			<td>	Fecha  minima: <input type="date" name="fecha_min"/></td>
+			<TD>Fecha maxima: <input type="date" name="fecha_max"/></td>
+		</TABLE>
+	
 	<br/>
-	<br/>
-	Provincia :
+
+	Lugar donde se perdio :
 <select name="lugar" id="lugar">
 	
 	<optgroup label="Provincia">
@@ -23,39 +79,30 @@
 	</optgroup>
 
 </select><br/>
-<br/>Marca Bici:
-<select name="marca" id="marca">
-<optgroup label="MARCA">
-	<option value="1" >Barcelona</option>
-	<option value="2">Tarragona</option>
-</optgroup>
-<optgroup label="MARCA2">
-	<option value="Lleida">Lleida</option>
-	<option value="Girona">Girona</option>
-</optgroup>
-</select>
-<br/><br/>Año bici: 
-	<select name="any" id="any">
-					<option value="nose" selected>No se de que año es</option>
-					<option value="2001">2001</option>
-					<option value="2002">2002</option>
-					<option value="2003">2003</option>
-					<option value="2004">2004</option>
-					<option value="2005">2005</option>
-					<option value="2006">2006</option>
-					<option value="2007">2007</option>
-					<option value="2008">2008</option>
-					<option value="2009">2009</option>
-					<option value="2010">2010</option>
-					<option value="2011">2011</option>
-					<option value="2012">2012</option>
-					<option value="2013">2013</option>
-					<option value="2014">2014</option>
-					<option value="2015">2015</option>
-					<option value="2016">2016</option>
+
+<br/>Marca bici: <input type="text" name="marca" id="marca" size="10" maxlength="35"/><br/>
+<br/>Modelo bici: <input type="text" name="modelo" id="modelo" size="10" maxlength="35"/><br/>
+<br/>Color bici (el  que mas predomina): <br/> <br/>
+
+		<input type="radio" name="color" value="Rojo"/>Rojo<br/>
+		<input type="radio" name="color" value="azul"/>Azul<br/>
+		<input type="radio" name="color" value="negro"/>Negro<br/>
+		<input type="radio" name="color" value="blanco"/>Blanco<br/>
+		<input type="radio" name="color" value="verde"/>Verde<br/>
+		<input type="radio" name="color" value="amarillo"/>Amarillo<br/>
+		<input type="radio" name="color" value="gris"/>Gris<br/>
+
+
+
+<br/>Antiguedad de la bici: 	
+	<select name="Antiguedad" id="Antiguedad">
+					<option value="No se como esta" selected>No se como esta</option>
+					<option value="nueva">Nueva</option>
+					<option value="Menos de 5 anyos">Menos de 5 años</option>
+					<option value="Mas de 5 anyos">Mas de 5 año</option>
 </select><br/>
 <br/>Numero Serie:
-<input type="text" name="numeroserie" id="numeroserie" size="10" maxlength="35"/><br/><br/>
+<input type="text" name="numeroserie" id="numeroserie" size="10" maxlength="15"/><br/><br/>
 <input type="submit" value="Enviar"/>
 </body>
 </html>
