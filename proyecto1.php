@@ -26,33 +26,31 @@
 
 		//valores entre fechas minimo y maximo
 		
-		$sql.=" WHERE (anu_data_robatori BETWEEN $fecha_min  AND $fecha_max)";
+		$sql.=" WHERE (anu_data_robatori BETWEEN $fecha_min  AND '".$fecha_max."')";
 
 		//valores de la ubicacion
 
-		$sql.= " AND anu_ubicacio_robatori = $lugar";
+		$sql.= " AND anu_ubicacio_robatori = '".$lugar."'";
 
 		//valores de la marca
 
-		$sql.= " AND anu_marca = $marca";
+		$sql.= " AND anu_marca = '".$marca."'";
 
 		//valores del modelo
 
-		$sql.= " AND anu_model = $modelo";
+		$sql.= " AND anu_model = '".$modelo."'";
 
 		//valores del color
 
-		$sql.= " AND anu_color = $color";
+		$sql.= " AND anu_color = '".$color."'";
 
-		//valores del modelo
 
-		$sql.= " AND anu_model = $modelo";
 
 		//Valores antiguedad
 		if ($Antiguedad=="No se como esta") {
 			$sql.= " AND anu_antiguitat";
 		}else {
-				$sql.= "AND anu_antiguitat = $antiguedad";
+				$sql.= "AND anu_antiguitat = '".$Antiguedad."'";
 			}
 		// mirar si funciona
 		/*	
@@ -66,15 +64,15 @@
 			}
 		*/
 
-		echo $tl;  
+		//echo $tl;  
 		//echo $sql;
 		
 		
 
 		//echo "---$sql---<br/><br/>";
 
-		//$anuncios = mysqli_query($conexion, $sql);
-		$anuncios = mysqli_query($conexion, $tl);
+		$anuncios = mysqli_query($conexion, $sql);
+		//$anuncios = mysqli_query($conexion, $tl);
 		
 		if(mysqli_num_rows($anuncios)!=0){
 			echo "Número de productos: " . mysqli_num_rows($anuncios) . "<br/><br/>";
