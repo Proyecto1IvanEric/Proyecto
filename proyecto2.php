@@ -23,10 +23,10 @@
 		//$sql = "SELECT * FROM anunci ";
 		$insertar = "INSERT INTO anunci (anu_titol, anu_data_anunci, anu_data_robatori, anu_ubicacio_robatori, anu_descripcio_robatori, anu_marca, anu_model, anu_color, anu_antiguitat, anu_descripcio, anu_numero_serie, anu_foto, anu_compensacio)";
 
-		$insertar.= "VALUES (".$tituloanuncio.", ".$fecha_anuncio.", ".$fecha_robo.", ".$lugar.",".$descripcion_robo.",".$marca.", ".$modelo.", ".$color.", ".$Antiguedad.", ".$descripcion_bici.", ".$numeroserie.", ".$Compesancion.")";
+		$insertar .= " VALUES (".$tituloanuncio.", ".$fecha_anuncio.", ".$fecha_robo.", ".$lugar.",".$descripcion_robo.",".$marca.", ".$modelo.", ".$color.", ".$Antiguedad.", ".$descripcion_bici.", ".$numeroserie.", ".$Compesancion.")";
 		echo "$insertar <br/>";
 		echo "$fotos";
-		mysql_query($insertar, $conexion);
+		mysql_query($conexion, $insertar);
 		/* ESTE COMENTARIO ES DEL PROYECTO 
 
 		//valores entre fechas minimo y maximo

@@ -20,6 +20,8 @@
 		//llamamos a la función extract para extraer los datos del array $_REQUEST y lo meta todo en las variables del mismo nombre del html
 		extract($_REQUEST);
 
+		$tl = "SELECT * FROM anunci ";
+
 		$sql = "SELECT * FROM anunci ";
 
 		//valores entre fechas minimo y maximo
@@ -64,16 +66,17 @@
 			}
 		*/
 
-		echo $sql;  
-
+		echo $tl;  
+		//echo $sql;
 		
 		
 
-		echo "---$sql---<br/><br/>";
+		//echo "---$sql---<br/><br/>";
 
-		$anuncios = mysqli_query($conexion, $sql);
-
-		if(mysqli_num_rows($anuncios)>0){
+		//$anuncios = mysqli_query($conexion, $sql);
+		$anuncios = mysqli_query($conexion, $tl);
+		
+		if(mysqli_num_rows($anuncios)!=0){
 			echo "Número de productos: " . mysqli_num_rows($anuncios) . "<br/><br/>";
 			while($anuncio = mysqli_fetch_array($anuncios)){
 				echo "Id: " . $anuncio['anu_id'] . "<br/>";
@@ -82,7 +85,7 @@
 				echo "Data  robatori: " . $anuncio['anu_data_robatori'] . "<br/>";
 				echo "Descripcion del robo: " . $anuncio['anu_descripcio_robatori'] . "<br/>";
 				echo "Marca: " . $anuncio['anu_marca'] . "<br/>";
-				echo "Modelo: " . $anuncio['anu_modelo'] . "<br/>";
+				echo "Modelo: " . $anuncio['anu_model'] . "<br/>";
 				echo "Color: " . $anuncio['anu_color'] . "<br/>";
 				echo "Antiguedad: " . $anuncio['anu_antiguitat'] . "<br/>";
 				echo "Descripcion bici: " . $anuncio['anu_descripcio'] . "<br/>";
