@@ -1042,10 +1042,7 @@ var dfClassicLayers = [{
 
                     </ul></div> 
                 </nav>
-                </header>
-                  <title>Ejemplo del uso de tablas - aprenderaprogramar.com</title>
-    </head>
-    <body>
+     <form name="f1" action="consulta.php" method="GET" onsubmit="return validar();">
     
         <table> 
         <tr>
@@ -1055,7 +1052,7 @@ var dfClassicLayers = [{
               
             Fecha  minima: <input type="date" name="fecha_min"/>
             Fecha maxima: <input type="date" name="fecha_max"/>
-            <br/>
+            <br/><br/>
             Lugar donde se perdio :
             <select name="lugar" id="lugar">
             
@@ -1078,6 +1075,7 @@ var dfClassicLayers = [{
     <input type="radio" name="color" value="verde"/>Verde<br/>
     <input type="radio" name="color" value="amarillo"/>Amarillo<br/>
     <input type="radio" name="color" value="gris"/>Gris<br/>
+     <input type="radio" name="color" value="otro"/>Otros<br/>
     </td>
 </tr>
 <tr>
@@ -1087,16 +1085,17 @@ var dfClassicLayers = [{
           <option value="No se como esta" selected>No se como esta</option>
           <option value="nueva">Nueva</option>
           <option value="Menos de 5 anyos">Menos de 5 años</option>
-          <option value="Mas de 5 anyos">Mas de 5 año</option>
+          <option value="Mas de 5 anyos">Mas de 5 años</option>
 </select><br/>
 <br/>Numero Serie:
-<input type="text" name="numeroserie" id="numeroserie" size="10" maxlength="15"/><br/><br/></td>
+<input type="text" name="numeroserie" id="numeroserie" size="10" maxlength="15"/><br/><br/>
+ <input type="submit" value="Enviar"/><br/><br/></td>
         </td>
 </tr>
         
         </table>
-        <input type="submit" value="Enviar"/><br/>
-        <br/><footer>
+       
+       <footer>
         Página hecha por Ivan y Eric.
            <footer>
             <div class="container">
