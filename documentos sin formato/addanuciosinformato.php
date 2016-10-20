@@ -53,8 +53,10 @@
 	
 		mysqli_close($conexion);
 
+		echo "Se ha añadido correctamente";
 		
 
 	?>
+
 </body>
 </html>

@@ -2,70 +2,10 @@
 <!-- saved from url=(0027)http://www.bicimarket.com/# -->
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-    <title>Bicicletas Online · Añadir anuncio bici robada</title>
-
-
-    <script>
-    function validar(){
-
-        var error="Los siguientes campos no son correctos:\n";
-        //Validacion titulo
-        if(document.f1.tituloanuncio==""){
-            error+="El titulo no puede estar vacio\n";
-        
-        
-
-        //validación de la fecha
-
-        
-        //validaciones fechas
-        }
-        if(document.f1.fecha_anuncio.length==0){
-            error+="La fecha anuncio es requerida\n";
-        }
-        if(document.f1.fecha_robo.length==0){
-            error+="La fecha robo es requerida\n";
-        }
-        
-
-        //Validaciones lugar
-        if(document.f1.lugar.value==""){
-            error+="El lugar es requerido\n";
-        }
-        //validación de la marca
-        if(document.f1.marca.value==""){
-            error+="La marca es requerida\n";
-        }
-        //validación del modelo
-        if(document.f1.modelo.value==""){
-            error+="El modelo es requerido\n";
-        }
-        //validación del color
-        if(document.f1.color.value==""){
-            error+="El color es requerido\n";
-        }
-        
-        //validación del foto
-        if(document.f1.fotos.value==""){
-            error+="La foto es requerida\n";
-        }
-        
-        
-
-        if(error=="Los siguientes campos no son correctos:\n"){
-            return true;
-        } else {
-            alert(error);
-            return false;
-        }
-    }
-
-    </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" id="veConnect" async="" src="./index_files/capture-apps-4.18.1.js.descarga"></script><script src="./index_files/7221.js.descarga" async="" type="text/javascript"></script><script async="" src="./index_files/tag.js.descarga"></script><script type="text/javascript" async="" src="./index_files/conversion_async.js.descarga"></script><script async="" src="./index_files/fbevents.js.descarga"></script><script type="text/javascript" async="" src="./index_files/analytics.js.descarga"></script>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<title>Bicicletas Online · Los Mejores Precios | Bicimarket.com</title>
 <link href="http://www.bicimarket.com/favicon.ico" type="image/x-icon" rel="icon"><link href="http://www.bicimarket.com/favicon.ico" type="image/x-icon" rel="shortcut icon"><meta content="Bicicletas Online · Los Mejores Precios | Bicimarket.com" name="title"><meta content="Bicicletas Online · Los Mejores Precios | Bicimarket.com" name="DC.Title"><meta name="description" content="Bicicletas online en Bicimarket, los mejores precios en más de 10.000 productos de ciclismo de las mejores marcas. Merida, BH, Shimano y muchas más"><meta content="Bicicletas online en Bicimarket, los mejores precios en más de 10.000 productos de ciclismo de las mejores marcas. Merida, BH, Shimano y muchas más" name="DC.Description"><meta name="keywords" content="Bici, bicis, bicicleta, bicicletas, bicicletas montaña, bicicletas de montaña, bicicletas carretera, tienda ciclismo, tienda bicis, tienda bicicletas, Merida, KTM, BH, Felt."><meta content="Bici, bicis, bicicleta, bicicletas, bicicletas montaña, bicicletas de montaña, bicicletas carretera, tienda ciclismo, tienda bicis, tienda bicicletas, Merida, KTM, BH, Felt." name="DC.keywords"><meta property="og:title" content="Bicicletas Online · Los Mejores Precios | Bicimarket.com"><meta property="og:url" content="http://www.bicimarket.com//"><meta property="og:image" content="http://www.bicimarket.com/img/admin/logo.png"><meta property="og:site_name" content="Bicimarket"><meta property="og:description" content="Bicicletas online en Bicimarket, los mejores precios en más de 10.000 productos de ciclismo de las mejores marcas. Merida, BH, Shimano y muchas más"><meta property="og:type" content="article">        <link rel="stylesheet" type="text/css" href="./index_files/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="./index_files/bootstrap-theme.min.css"><link rel="stylesheet" type="text/css" href="./index_files/estructura.min.css"><link rel="stylesheet" type="text/css" href="./index_files/media.css"><link rel="stylesheet" type="text/css" href="./index_files/fuente.css"><link rel="stylesheet" type="text/css" href="./index_files/bootstrapValidator.css"><link rel="stylesheet" type="text/css" href="./index_files/ui.totop.css"><link rel="stylesheet" type="text/css" href="./index_files/e-general.css"><link rel="stylesheet" type="text/css" href="./index_files/e-general.css">
 
         <meta name="geo.region" content="ES-B">
@@ -245,7 +185,7 @@
                     </div>
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav familias">
-                            <li class="active"><a href="http://www.bicimarket.com/" target="_parent" title="Home" class="t-home">Home</a></li>
+                            <li class="active"><a href="index.html" target="_parent" title="Home" class="t-home">Home</a></li>
                             <li><a href="http://www.bicimarket.com/mtb" target="_parent" title="MTB" class="t-mtb">MTB</a></li>
                             <li><a href="http://www.bicimarket.com/carretera" target="_parent" title="Carretera" class="t-carretera">Carretera</a></li>
                             <li><a href="http://www.bicimarket.com/triatlon" target="_parent" title="Triatlon" class="t-triatlon">Triatlón</a></li>
@@ -253,8 +193,8 @@
                             <li><a href="http://www.bicimarket.com/Liquidacion-y-Rebajas-Bicicletas-c20612.html" title="Ofertas" class="t-outlet">Ofertas</a></li>
                             <li><a href="http://www.bicimarket.com/blog" title="Blog" class="t-outlet t-blog" target="_blank">Blog</a></li>
                             <li><a href="http://www.bicimarket.com/tiendas-ciclismo" target="_parent" title="Tiendas BMK" class="t-tiendas">Tiendas BMK</a></li>
-                             <li><a href="index.html"  title="Formulario" class="t-tiendas">Formulario</a></li>
-                            <li><a href="addform.html"  title="Formulario" class="t-tiendas">Añadir anuncio de Bici robada</a></li>
+                              <li><a href="consultas.html"  title="Formulario" class="t-tiendas">Formulario</a></li>
+                            <li><a href="addformulario.html"  title="Formulario" class="t-tiendas">Añadir anuncio de Bici robada</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="divider"></li>
@@ -1052,60 +992,58 @@ var dfClassicLayers = [{
                     </ul></div> 
                 </nav>
                 </header>
-<form name="f1" action="proyecto2.php" method="GET" onsubmit="return validar();">
-    Titulo Anuncio: <input type="text" name="tituloanuncio" id="tituloanuncio" ><br/>   <br/>
-    Fecha del anuncio:<input type="date" name="fecha_anuncio" nametitle="se necesita la fecha anuncio" required="required"/><br/><br/>
-    Fecha del robo: <input type="date" name="fecha_robo" nametitle="se necesita la fecha del robo" required="required"/><br/><br/>
-    Ubicacion del lugar donde se encontro:
-<select name="lugar" id="lugar">
+ <?php
+    $conexion = mysqli_connect("localhost", "root", "","bd_proyecto1");
+
+        //le decimos a la conexión que los datos los devuelva diréctamente en utf8, así no hay que usar htmlentities
+        $acentos = mysqli_query($conexion, "SET NAMES 'utf8'");
+
+        if (!$conexion) {
+            echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
+            echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
+            echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
+            exit;
+        }
+        //llamamos a la función extract para extraer los datos del array $_REQUEST y lo meta todo en las variables del mismo nombre del html
+        extract($_REQUEST);
+
+        //$sql = "SELECT * FROM anunci ";
+        $inst = "INSERT INTO anunci (anu_titol, anu_data_anunci, anu_data_robatori, anu_ubicacio_robatori, anu_descripcio_robatori, anu_marca, anu_model, anu_color, anu_antiguitat, anu_descripcio, anu_numero_serie, anu_foto, anu_compensacio)";
+
+        $inst .= " VALUES (
+        '".$tituloanuncio."', 
+        '".$fecha_anuncio."', 
+        '".$fecha_robo."', 
+        '".$lugar."',
+        '".$descripcion_robo."',
+        '".$marca."',
+        '".$modelo."',
+        '".$color."', 
+        '".$Antiguedad."', 
+        '".$descripcion_bici."',
+        '".$numeroserie."',
+        '".$fotos."',
+        ".$Compesancion.")";
+
+        //echo "$inst <br/><br/>";
+        //echo "$fotos";
+        mysqli_query($conexion, $inst);
+        /*mirar la conexion
+        $crear = mysql_query($conexion, $insertar);
+        
+        if(mysqli_num_rows($crear)!=0){
+            echo "Se han creado  " . mysqli_num_rows($crear) . " anuncio<br/><br/>";
+                } else {
+            echo "No se ha creado nada";
+        }
+        */
     
-    <optgroup label="Provincia">
-        <option value="Barcelona" >Barcelona</option>
-        <option value="Tarragona">Tarragona</option>
-        <option value="Lleida">Lleida</option>
-        <option value="Girona">Girona</option>
-    </optgroup>
+        mysqli_close($conexion);
 
-</select><br/><br/>
-Descripcion robo:<br/><br/>
-<textarea name="descripcion_robo" id="descripcion_robo" cols="25" rows="5"cols="15" rows="5">Breve descripcion de los detalles del robo, donde se encontro, en que estado, etc.</textarea><br/>
+        echo "Se ha añadido correctamente";
+        
 
-<br/>Marca bici: <input type="text" name="marca" id="marca" size="10" maxlength="35"/><br/>
-<br/>Modelo bici: <input type="text" name="modelo" id="modelo" size="10" maxlength="35"/><br/>
-<br/>Color bici (el  que mas predomina): <br/> <br/>
-
-        <input type="radio" name="color" value="Rojo"/>Rojo<br/>
-        <input type="radio" name="color" value="azul"/>Azul<br/>
-        <input type="radio" name="color" value="negro"/>Negro<br/>
-        <input type="radio" name="color" value="blanco"/>Blanco<br/>
-        <input type="radio" name="color" value="verde"/>Verde<br/>
-        <input type="radio" name="color" value="amarillo"/>Amarillo<br/>
-        <input type="radio" name="color" value="gris"/>Gris<br/>        
-        <input type="radio" name="color" value="otro"/>Otro<br/>
-
-<br/>Antiguedad de la bici:     
-    <select name="Antiguedad" id="Antiguedad">
-                    <option value="No se como esta" selected>No se como esta</option>
-                    <option value="nueva">Nueva</option>
-                    <option value="Menos de 5 anyos">Menos de 5 años</option>
-                    <option value="Mas de 5 anyos">Mas de 5 año</option>
-</select><br/><br/>
-
-Descripcion bici:<br/><br/>
-<textarea name="descripcion_bici" id="descripcion_bici" cols="25" rows="5" >Breve descripcion de como es la bici, como esta, si le falta alguna parte, etc.</textarea><br/>
-
-<br/>Numero Serie:
-<input type="text" name="numeroserie" id="numeroserie" size="10" maxlength="15"/><br/><br/>
-
-Foto:
-<br/><br/>
-<input type="file" name="fotos" id="fotos" accept=".jpg">
-<br/><br/>
-Compesancion:
-<input type="number" name="Compesancion" id="Compesancion"  value="0" maxlength="3"> € 
-<br/><br/>
-<input type="submit" value="Enviar"/>
-<br/><br/>
+    ?>
         <footer>
         Página hecha por Ivan y Eric.
            <footer>

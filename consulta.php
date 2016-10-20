@@ -2,58 +2,6 @@
 <!-- saved from url=(0027)http://www.bicimarket.com/# -->
 <html lang="es">
 <head>
-
-    <script>
-    function validar(){
-
-        var error="Los siguientes campos no son correctos:\n";
-
-    
-
-        //validación de la fecha
-        if(document.f1.fecha_min.value==""){
-            error+="La fecha minima es requerida\n";
-        }
-        if(document.f1.fecha_max.value==""){
-            error+="La fecha maxima es requerida\n";
-        }
-
-        if(document.f1.lugar.value==""){
-            error+="El lugar es requerido\n";
-        }
-        //validación de la marca
-        if(document.f1.marca.value==""){
-            error+="La marca es requerida\n";
-        }
-        //validación del modelo
-        if(document.f1.modelo.value==""){
-            error+="El modelo es requerido\n";
-        }
-        //validación del color
-        if(document.f1.color.value==""){
-            error+="El color es requerido\n";
-        }
-    //validación del numero de serie
-    /*
-        if((document.f1.numeroserie.value!="") ||(document.f1.numeroserie.value.length!=15))
-
-
-        {
-            
-        error+="El numero de serie que introduce no es correcto\n";             
-            
-        }*/
-
-
-        if(error=="Los siguientes campos no son correctos:\n"){
-            return true;
-        } else {
-            alert(error);
-            return false;
-        }
-    }
-
-    </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" id="veConnect" async="" src="./index_files/capture-apps-4.18.1.js.descarga"></script><script src="./index_files/7221.js.descarga" async="" type="text/javascript"></script><script async="" src="./index_files/tag.js.descarga"></script><script type="text/javascript" async="" src="./index_files/conversion_async.js.descarga"></script><script async="" src="./index_files/fbevents.js.descarga"></script><script type="text/javascript" async="" src="./index_files/analytics.js.descarga"></script>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1043,60 +991,79 @@ var dfClassicLayers = [{
 
                     </ul></div> 
                 </nav>
-     <form name="f1" action="consulta.php" method="GET" onsubmit="return validar();">
-    
-        <table> 
-        <tr>
-          <td>
-          <br/>
-              Fecha del robo:<br/><br/>
-              
-            Fecha  minima: <input type="date" name="fecha_min"/>
-            Fecha maxima: <input type="date" name="fecha_max"/>
-            <br/><br/>
-            Lugar donde se perdio :
-            <select name="lugar" id="lugar">
-            
-            <optgroup label="Provincia">
-              <option value="Barcelona" >Barcelona</option>
-              <option value="Tarragona">Tarragona</option>
-              <option value="Lleida">Lleida</option>
-              <option value="Girona">Girona</option>
-            </optgroup>
-          </select><br/>
-          <br/>Marca bici: <input type="text" name="marca" id="marca" size="10" maxlength="35"/><br/>
-          <br/>Modelo bici: <input type="text" name="modelo" id="modelo" size="10" maxlength="35"/><br/>    
-        </td>
-        <td><br/>Color bici (el  que mas predomina): <br/> <br/>
+                </header>
+ <?php
+    $conexion = mysqli_connect('localhost', 'root', '', 'bd_proyecto1');
+        //le decimos a la conexión que los datos los devuelva diréctamente en utf8, así no hay que usar htmlentities
+        $acentos = mysqli_query($conexion, "SET NAMES 'utf8'");
+        if (!$conexion) {
+            echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
+            echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
+            echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
+            exit;
+        }
+        //llamamos a la función extract para extraer los datos del array $_REQUEST y lo meta todo en las variables del mismo nombre del html
 
-    <input type="radio" name="color" value="Rojo"/>Rojo<br/>
-    <input type="radio" name="color" value="azul"/>Azul<br/>
-    <input type="radio" name="color" value="negro"/>Negro<br/>
-    <input type="radio" name="color" value="blanco"/>Blanco<br/>
-    <input type="radio" name="color" value="verde"/>Verde<br/>
-    <input type="radio" name="color" value="amarillo"/>Amarillo<br/>
-    <input type="radio" name="color" value="gris"/>Gris<br/>
-     <input type="radio" name="color" value="otro"/>Otros<br/>
-    </td>
-</tr>
-<tr>
-<td></td>
-<td><br/>Antiguedad de la bici:   
-  <select name="Antiguedad" id="Antiguedad">
-          <option value="No se como esta" selected>No se como esta</option>
-          <option value="nueva">Nueva</option>
-          <option value="Menos de 5 anyos">Menos de 5 años</option>
-          <option value="Mas de 5 anyos">Mas de 5 años</option>
-</select><br/>
-<br/>Numero Serie:
-<input type="text" name="numeroserie" id="numeroserie" size="10" maxlength="15"/><br/><br/>
- <input type="submit" value="Enviar"/><br/><br/></td>
-        </td>
-</tr>
+        extract($_REQUEST);
+    
+        $sql = "SELECT * FROM anunci ";
+        //valores entre fechas minimo y maximo
         
-        </table>
-       
-       <footer>
+        $sql.=" WHERE (anu_data_robatori BETWEEN '".$fecha_min."'  AND '".$fecha_max."')";
+        //valores de la ubicacion
+        $sql.= " AND anu_ubicacio_robatori = '".$lugar."'";
+        //valores de la marca
+        $sql.= " AND anu_marca = '".$marca."'";
+        //valores del modelo
+        $sql.= " AND anu_model = '".$modelo."'";
+        //valores del color
+        $sql.= " AND anu_color = '".$color."'";
+        //Valores antiguedad
+        if ($Antiguedad=="No se como esta") {
+            $sql.= " AND anu_antiguitat";
+        }else {
+                $sql.= " AND anu_antiguitat = '".$Antiguedad."'";
+            }
+        
+        $sql.= " AND anu_numero_serie = '".$numeroserie."'";  
+
+        //echo $sql;
+        
+        
+        //echo "---$sql---<br/><br/>";
+        $anuncios = mysqli_query($conexion, $sql);
+        //$anuncios = mysqli_query($conexion, $tl);
+        
+        if(mysqli_num_rows($anuncios)!=0){
+            echo "Número de productos: " . mysqli_num_rows($anuncios) . "<br/><br/>";
+            while($anuncio = mysqli_fetch_array($anuncios)){
+                echo "<table> <tr><td>Id: " . $anuncio['anu_id'] . "<br/>";
+                echo "Nombre titulo: " . $anuncio['anu_titol'] . "<br/>";
+                echo "Data  anuncio: " . $anuncio['anu_data_anunci'] . "<br/>";
+                echo "Data  robatori: " . $anuncio['anu_data_robatori'] . "<br/>";
+                echo "Descripcion del robo: " . $anuncio['anu_descripcio_robatori'] . "<br/>";
+                echo "Marca: " . $anuncio['anu_marca'] . "<br/>";
+                echo "Modelo: " . $anuncio['anu_model'] . "<br/>";
+                echo "Color: " . $anuncio['anu_color'] . "<br/>";
+                echo "Antiguedad: " . $anuncio['anu_antiguitat'] . "<br/>";
+                echo "Descripcion bici: " . $anuncio['anu_descripcio'] . "<br/>";
+                echo "Numero de serie: " . $anuncio['anu_numero_serie'] . "<br/></td>";
+                $foto='img/'.$anuncio['anu_foto'];
+                if (file_exists ($foto)){
+                    echo "<td><img src='" . $foto . "' width='150'/><br/><br/>";
+                } else {
+                    echo "<td><img src='img/0.jpg' width='150'/><br/><br/>";
+                }
+                echo "Compesacion: " . $anuncio['anu_compensacio'] . "<br/></td><tr><table> <br/><br/><br/> ";
+            }
+        } else {
+            echo " <br/> <br/>No hay datos que mostrar!";
+        }
+        
+        mysqli_close($conexion);
+    
+    ?>
+        <footer>
         Página hecha por Ivan y Eric.
            <footer>
             <div class="container">
