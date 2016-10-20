@@ -9,17 +9,26 @@
 	function validar(){
 
 		var error="Los siguientes campos no son correctos:\n";
-
-	
+		//Validacion titulo
+		if(document.f1.tituloanuncio==""){
+			error+="El titulo no puede estar vacio\n";
+		
+		
 
 		//validación de la fecha
-		if(document.f1.fecha_min.value==""){
-			error+="La fecha minima es requerida\n";
-		}
-		if(document.f1.fecha_max.value==""){
-			error+="La fecha maxima es requerida\n";
-		}
 
+        
+        //validaciones fechas
+        }
+		if(document.f1.fecha_anuncio.length==0){
+			error+="La fecha anuncio es requerida\n";
+		}
+		if(document.f1.fecha_robo.length==0){
+			error+="La fecha robo es requerida\n";
+		}
+		
+
+		//Validaciones lugar
 		if(document.f1.lugar.value==""){
 			error+="El lugar es requerido\n";
 		}
@@ -35,17 +44,13 @@
 		if(document.f1.color.value==""){
 			error+="El color es requerido\n";
 		}
-	//validación del numero de serie
-	/*
-		if((document.f1.numeroserie.value!="") ||(document.f1.numeroserie.value.length!=15))
-
-
-		{
-			
-		error+="El numero de serie que introduce no es correcto\n";				
-			
-		}*/
-
+		
+		//validación del foto
+		if(document.f1.fotos.value==""){
+			error+="La foto es requerida\n";
+		}
+		
+		
 
 		if(error=="Los siguientes campos no son correctos:\n"){
 			return true;
@@ -59,9 +64,9 @@
 </head>
 <body>
 	<form name="f1" action="proyecto2.php" method="GET" onsubmit="return validar();">
-	Titulo Anuncio: <input type="text" name="tituloanuncio" id="tituloanuncio"><br/>	<br/>
-	Fecha del anuncio:<input type="date" name="fecha_anuncio"/><<br/><br/>
-	Fecha del robo: <input type="date" name="fecha_robo"/><br/><br/>
+	Titulo Anuncio: <input type="text" name="tituloanuncio" id="tituloanuncio" ><br/>	<br/>
+	Fecha del anuncio:<input type="date" name="fecha_anuncio" nametitle="se necesita la fecha anuncio" required="required"/><br/><br/>
+	Fecha del robo: <input type="date" name="fecha_robo" nametitle="se necesita la fecha del robo" required="required"/><br/><br/>
 	Ubicacion del lugar donde se encontro:
 <select name="lugar" id="lugar">
 	
