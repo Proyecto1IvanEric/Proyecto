@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Bicicletas Online · Los Mejores Precios | Bicimarket.com</title>
+
+
+	<script>
+	function validar(){
+
+		var error="Los siguientes campos no son correctos:\n";
+
+	
+
+		//validación de la fecha
+		if(document.f1.fecha_min.value==""){
+			error+="La fecha minima es requerida\n";
+		}
+		if(document.f1.fecha_max.value==""){
+			error+="La fecha maxima es requerida\n";
+		}
+
+		if(document.f1.lugar.value==""){
+			error+="El lugar es requerido\n";
+		}
+		//validación de la marca
+		if(document.f1.marca.value==""){
+			error+="La marca es requerida\n";
+		}
+		//validación del modelo
+		if(document.f1.modelo.value==""){
+			error+="El modelo es requerido\n";
+		}
+		//validación del color
+		if(document.f1.color.value==""){
+			error+="El color es requerido\n";
+		}
+	//validación del numero de serie
+	/*
+		if((document.f1.numeroserie.value!="") ||(document.f1.numeroserie.value.length!=15))
+
+
+		{
+			
+		error+="El numero de serie que introduce no es correcto\n";				
+			
+		}*/
+
+
+		if(error=="Los siguientes campos no son correctos:\n"){
+			return true;
+		} else {
+			alert(error);
+			return false;
+		}
+	}
+
+	</script>
+</head>
+<body>
+	<form name="f1" action="proyecto1.php" method="GET" onsubmit="return validar();">
+	<br/>
+	<table>
+	<tr> <td>
+	<strong>Fecha del robo:</strong><br/><br/>
+			Fecha  minima: <input type="date" name="fecha_min"/><br/><br/>
+			Fecha maxima: <input type="date" name="fecha_max"/><br/><br/>
+		
+	
+	<br/>
+
+	<strong>Lugar donde se perdio :</strong>
+<select name="lugar" id="lugar">
+	
+	<optgroup label="Provincia">
+		<option value="Barcelona" >Barcelona</option>
+		<option value="Tarragona">Tarragona</option>
+		<option value="Lleida">Lleida</option>
+		<option value="Girona">Girona</option>
+	</optgroup>
+
+</select><br/>
+
+<br/><strong>Marca bici: </strong> <input type="text" name="marca" id="marca" size="10" maxlength="35"/><br/>
+<br/><strong>Modelo bici: </strong><input type="text" name="modelo" id="modelo" size="10" maxlength="35"/><br/>
+</td></tr>
+
+<tr><td>
+<br/><strong>Color bici (el  que mas predomina): </strong><br/> <br/>
+
+		<input type="radio" name="color" value="Rojo"/>Rojo<br/>
+		<input type="radio" name="color" value="azul"/>Azul<br/>
+		<input type="radio" name="color" value="negro"/>Negro<br/>
+		<input type="radio" name="color" value="blanco"/>Blanco<br/>
+		<input type="radio" name="color" value="verde"/>Verde<br/>
+		<input type="radio" name="color" value="amarillo"/>Amarillo<br/>
+		<input type="radio" name="color" value="gris"/>Gris<br/>
+
+
+
+<br/><strong>Antiguedad de la bici:</strong> 	
+	<select name="Antiguedad" id="Antiguedad">
+					<option value="No se como esta" selected>No se como esta</option>
+					<option value="nueva">Nueva</option>
+					<option value="Menos de 5 anyos">Menos de 5 años</option>
+					<option value="Mas de 5 anyos">Mas de 5 años</option>
+</select><br/>
+<br/><strong>Numero Serie:</strong>
+<input type="text" name="numeroserie" id="numeroserie" size="10" maxlength="15"/><br/><br/>
+<input type="submit" value="Enviar"/>
+</td></tr>
+</table>
+</body>
+</html>

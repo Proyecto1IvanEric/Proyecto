@@ -1063,18 +1063,27 @@ var dfClassicLayers = [{
         if(mysqli_num_rows($anuncios)!=0){
             echo "Número de productos: " . mysqli_num_rows($anuncios) . "<br/><br/>";
             while($anuncio = mysqli_fetch_array($anuncios)){
+                <TABLE WIDTH=500 HEIGHT=300>
+
+            <TD width=250 ALIGN=RIGHT>
+           
+
                 echo "Id: " . $anuncio['anu_id'] . "<br/>";
                 echo "Nombre titulo: " . $anuncio['anu_titol'] . "<br/>";
                 echo "Data  anuncio: " . $anuncio['anu_data_anunci'] . "<br/>";
                 echo "Data  robatori: " . $anuncio['anu_data_robatori'] . "<br/>";
                 echo "Descripcion del robo: " . $anuncio['anu_descripcio_robatori'] . "<br/>";
+                 </TD>
+                 
+                 <TD WIDTH=250 ALIGN=CENTER>
+
                 echo "Marca: " . $anuncio['anu_marca'] . "<br/>";
                 echo "Modelo: " . $anuncio['anu_model'] . "<br/>";
                 echo "Color: " . $anuncio['anu_color'] . "<br/>";
                 echo "Antiguedad: " . $anuncio['anu_antiguitat'] . "<br/>";
                 echo "Descripcion bici: " . $anuncio['anu_descripcio'] . "<br/>";
                 echo "Numero de serie: " . $anuncio['anu_numero_serie'] . "<br/>";
-
+                </TD>
                 $foto='img/'.$anuncio['anu_foto'];
 
                 if (file_exists ($foto)){
