@@ -1037,17 +1037,17 @@ var dfClassicLayers = [{
         if(mysqli_num_rows($anuncios)!=0){
             echo "Número de productos: " . mysqli_num_rows($anuncios) . "<br/><br/>";
             while($anuncio = mysqli_fetch_array($anuncios)){
-                echo "<table> <tr><td>Id: " . $anuncio['anu_id'] . "<br/>";
-                echo "Nombre titulo: " . $anuncio['anu_titol'] . "<br/>";
-                echo "Data  anuncio: " . $anuncio['anu_data_anunci'] . "<br/>";
-                echo "Data  robatori: " . $anuncio['anu_data_robatori'] . "<br/>";
-                echo "Descripcion del robo: " . $anuncio['anu_descripcio_robatori'] . "<br/>";
-                echo "Marca: " . $anuncio['anu_marca'] . "<br/>";
-                echo "Modelo: " . $anuncio['anu_model'] . "<br/>";
-                echo "Color: " . $anuncio['anu_color'] . "<br/>";
-                echo "Antiguedad: " . $anuncio['anu_antiguitat'] . "<br/>";
-                echo "Descripcion bici: " . $anuncio['anu_descripcio'] . "<br/>";
-                echo "Numero de serie: " . $anuncio['anu_numero_serie'] . "<br/></td>";
+                echo "<table> <tr><td><strong>Id:</strong> " . $anuncio['anu_id'] . "<br/>";
+                echo "<strong>Nombre titulo: </strong>" . $anuncio['anu_titol'] . "<br/>";
+                echo "<strong>Data  anuncio: </strong> " . $anuncio['anu_data_anunci'] . "<br/>";
+                echo "<strong>Data  robatori:</strong> " . $anuncio['anu_data_robatori'] . "<br/>";
+                echo "<strong>Descripcion del robo:</strong> " . $anuncio['anu_descripcio_robatori'] . "<br/>";
+                echo "<strong>Marca: </strong>" . $anuncio['anu_marca'] . "<br/>";
+                echo "<strong>Modelo: </strong>" . $anuncio['anu_model'] . "<br/>";
+                echo "<strong>Color: </strong>" . $anuncio['anu_color'] . "<br/>";
+                echo "<strong>Antiguedad:</strong> " . $anuncio['anu_antiguitat'] . "<br/>";
+                echo "<strong>Descripcion bici:</strong> " . $anuncio['anu_descripcio'] . "<br/>";
+                echo "<strong>Numero de serie:</strong> " . $anuncio['anu_numero_serie'] . "<br/></td>";
                 $foto='img/'.$anuncio['anu_foto'];
                 if (file_exists ($foto)){
                     echo "<td><img src='" . $foto . "' width='150'/><br/><br/>";
@@ -1057,7 +1057,7 @@ var dfClassicLayers = [{
                 echo "Compesacion: " . $anuncio['anu_compensacio'] . "<br/></td><tr><table> <br/><br/><br/> ";
             }
         } else {
-            echo " <br/> <br/>No hay datos que mostrar!";
+            echo "<strong><br/><br/>No hay datos que mostrar!</strong>";
         }
         
         mysqli_close($conexion);

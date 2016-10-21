@@ -1009,7 +1009,7 @@ var dfClassicLayers = [{
 
         //$sql = "SELECT * FROM anunci ";
         $inst = "INSERT INTO anunci (anu_titol, anu_data_anunci, anu_data_robatori, anu_ubicacio_robatori, anu_descripcio_robatori, anu_marca, anu_model, anu_color, anu_antiguitat, anu_descripcio, anu_numero_serie, anu_foto, anu_compensacio)";
-
+      
         $inst .= " VALUES (
         '".$tituloanuncio."', 
         '".$fecha_anuncio."', 
@@ -1040,10 +1040,11 @@ var dfClassicLayers = [{
     
         mysqli_close($conexion);
 
-        echo "Se ha añadido correctamente";
+        echo "Se ha añadido correctamente<br/>";
         
 
     ?>
+    <br/>
         <footer>
         Página hecha por Ivan y Eric.
            <footer>

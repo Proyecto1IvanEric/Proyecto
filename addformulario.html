@@ -1055,11 +1055,11 @@ var dfClassicLayers = [{
     <form name="f1" action="addanucios.php" method="GET" onsubmit="return validar();">
     <table> 
         <tr>
-          <td>
-          <br/><strong>Titulo Anuncio: </strong><input type="text" name="tituloanuncio" id="tituloanuncio" ><br/>   <br/>
+          <td VALIGN=TOP>
+          <strong>Título anuncio: </strong><input type="text" name="tituloanuncio" id="tituloanuncio" ><br/><br/>
     <strong>Fecha del anuncio: </strong><input type="date" name="fecha_anuncio" nametitle="se necesita la fecha anuncio" required="required"/><br/><br/>
-    <strong>Fecha del dia que se encontro: </strong><input type="date" name="fecha_robo" nametitle="se necesita la fecha del robo" required="required"/><br/><br/>
-    <strong>Ubicacion del lugar donde se encontro: </strong>
+    <strong>Fecha del día que se encontró: </strong><input type="date" name="fecha_robo" nametitle="se necesita la fecha del robo" required="required"/><br/><br/>
+    <strong>Ubicación del lugar donde se encontró:<br/> </strong>
 <select name="lugar" id="lugar">
     
     <optgroup label="Provincia">
@@ -1069,23 +1069,21 @@ var dfClassicLayers = [{
         <option value="Girona">Girona</option>
     </optgroup>
 
-</select><br/><br/>
-<strong>Descripcion robo:</strong><br/><br/>
-<textarea name="descripcion_robo" id="descripcion_robo" cols="25" rows="5"cols="15" rows="5">Breve descripcion de los detalles del robo, donde se encontro, en que estado, etc.</textarea><br/>
+</select><br/>
+
 
 <br/><strong>Marca bici: </strong><input type="text" name="marca" id="marca" size="10" maxlength="35"/><br/>
 <br/><strong>Modelo bici: </strong><input type="text" name="modelo" id="modelo" size="10" maxlength="35"/><br/>
-<br/><strong>Antiguedad de la bici: </strong>   
+<br/><strong>Antigüedad de la bici: </strong>   
     <select name="Antiguedad" id="Antiguedad">
-                    <option value="No se como esta" selected>No se como esta</option>
+                    <option value="No se como esta" selected>No sé como está</option>
                     <option value="nueva">Nueva</option>
                     <option value="Menos de 5 anyos">Menos de 5 años</option>
-                    <option value="Mas de 5 anyos">Mas de 5 años</option><br/>
-</select>
-<br/><br/><strong>Numero Serie:</strong>
-<input type="text" name="numeroserie" id="numeroserie" size="10" maxlength="15"/><br/></td>
+                    <option value="Mas de 5 anyos">Más de 5 años</option><br/>
+</select></td>
 
-<td><br/><br/><strong>Color bici (el  que mas predomina): </strong><br/>
+
+<td><strong>Color bici (el que más predomina): </strong><br/>
 
         <br/><input type="radio" name="color" value="Rojo"/>Rojo<br/>
         <input type="radio" name="color" value="azul"/>Azul<br/>
@@ -1097,23 +1095,20 @@ var dfClassicLayers = [{
         <input type="radio" name="color" value="otro"/>Otro<br/>
 
 
-        <br/><strong>Descripcion bici:</strong><br/><br/>
-<textarea name="descripcion_bici" id="descripcion_bici" cols="25" rows="5" >Breve descripcion de como es la bici, como esta, si le falta alguna parte, etc.</textarea><br/><br/>
-
-<br/><strong>Foto: </strong>      
-
-<input type="file" name="fotos" id="fotos" accept=".jpg">
-<br/><br/>
-<strong>Compesancion: (sera un maximo de 99,99€) </strong>
-<input type="number" name="Compesancion" id="Compesancion"  value="0" maxlength="3"> € 
-<br/><br/>
-</td></tr>
-<tr>
-<td align="right">
-<br/><br/><input type="submit" value="Enviar"/>
-      </td>
-</tr>
         
+<br/><strong>Número Serie:</strong>
+<input type="text" name="numeroserie" id="numeroserie" size="10" maxlength="15"/><br/>
+<br/><strong>Foto: </strong>
+<input type="file" name="fotos" id="fotos" accept=".jpg">
+<br/>
+<strong>Compesanción: (será un máximo de 99,99€) </strong>
+<input type="number" name="Compesancion" id="Compesancion"  value="0" maxlength="3"> €
+<br/><br/><input type="submit" value="Enviar"/><br/><br/></td>
+<td VALIGN=TOP>
+<strong>Descripción bici:</strong><br/><br/>
+<textarea name="descripcion_bici" id="descripcion_bici" cols="25" rows="5" >Breve descripción de como es la bici, como esta, si le falta alguna parte, etc.</textarea><br/><br/>
+<strong>Descripcion robo:</strong><br/><br/>
+<textarea name="descripcion_robo" id="descripcion_robo" cols="25" rows="5"cols="15" rows="5">Breve descripcion de los detalles del robo, donde se encontro, en que estado, etc.</textarea><br/></td></tr>
 
         </table>
         <footer>
