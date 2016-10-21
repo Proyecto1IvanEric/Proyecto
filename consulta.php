@@ -1013,19 +1013,25 @@ var dfClassicLayers = [{
         //valores de la ubicacion
         $sql.= " AND anu_ubicacio_robatori = '".$lugar."'";
         //valores de la marca
-        $sql.= " AND anu_marca = '".$marca."'";
+        if($marca==""){}
+        else{
+        $sql.= " AND anu_marca = '".$marca."'";}
         //valores del modelo
-        $sql.= " AND anu_model = '".$modelo."'";
-        //valores del color
-        $sql.= " AND anu_color = '".$color."'";
+        if($modelo==""){}
+        else{        
+        $sql.= " AND anu_model = '".$modelo."'";}
+        //valores del color 
+        if($color==""){ 
+        }
+        else{
+        $sql.= " AND anu_color = '".$color."'";}
         //Valores antiguedad
-        if ($Antiguedad=="No se como esta") {
-            $sql.= " AND anu_antiguitat";
-        }else {
-                $sql.= " AND anu_antiguitat = '".$Antiguedad."'";
-            }
-        
-        $sql.= " AND anu_numero_serie = '".$numeroserie."'";  
+        if ($Antiguedad=="No se como esta"){}
+        else {
+            $sql.= " AND anu_antiguitat = '".$Antiguedad."'";}
+        if ($numeroserie==""){}
+        else{
+        $sql.= " AND anu_numero_serie ='".$numeroserie."'";}
 
         //echo $sql;
         
@@ -1035,7 +1041,7 @@ var dfClassicLayers = [{
         //$anuncios = mysqli_query($conexion, $tl);
         
         if(mysqli_num_rows($anuncios)!=0){
-            echo "Número de productos: " . mysqli_num_rows($anuncios) . "<br/><br/>";
+            echo "<strong>Número de productos:</strong> " . mysqli_num_rows($anuncios) . "<br/><br/>";
             while($anuncio = mysqli_fetch_array($anuncios)){
                 echo "<table> <tr><td><strong>Id:</strong> " . $anuncio['anu_id'] . "<br/>";
                 echo "<strong>Nombre titulo: </strong>" . $anuncio['anu_titol'] . "<br/>";

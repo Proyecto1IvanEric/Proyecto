@@ -9,7 +9,7 @@
         var error="Los siguientes campos no son correctos:\n";
 
     
-
+        /*
         //validación de la fecha
         if(document.f1.fecha_min.value==""){
             error+="La fecha minima es requerida\n";
@@ -17,10 +17,11 @@
         if(document.f1.fecha_max.value==""){
             error+="La fecha maxima es requerida\n";
         }
-
+        */
         if(document.f1.lugar.value==""){
             error+="El lugar es requerido\n";
         }
+        /*
         //validación de la marca
         if(document.f1.marca.value==""){
             error+="La marca es requerida\n";
@@ -28,22 +29,13 @@
         //validación del modelo
         if(document.f1.modelo.value==""){
             error+="El modelo es requerido\n";
-        }
+        }*/
         //validación del color
-        if(document.f1.color.value==""){
-            error+="El color es requerido\n";
+        //if(document.f1.color.value==""){
+          //  error+="El color es requerido\n";
         }
     //validación del numero de serie
-    /*
-        if((document.f1.numeroserie.value!="") ||(document.f1.numeroserie.value.length!=15))
-
-
-        {
-            
-        error+="El numero de serie que introduce no es correcto\n";             
-            
-        }*/
-
+    
 
         if(error=="Los siguientes campos no son correctos:\n"){
             return true;
@@ -1045,14 +1037,14 @@ var dfClassicLayers = [{
                 </nav>
      <form name="f1" action="consulta.php" method="GET" onsubmit="return validar();">
     
-        <table> 
+        <table style="border-spacing: 15px; border-collapse: inherit;" > 
         <tr>
           <td>
           <br/>
-             <strong>   Fecha del robo:<br/><br/></strong>
+             <strong>Fecha del robo:<br/><br/></strong>
               
-           <strong> Fecha  minima:</strong>  <input type="date" name="fecha_min"/>
-            <strong> Fecha máxima:</strong>  <input type="date" name="fecha_max"/>
+           <strong> Fecha  minima:</strong>  <input type="date" name="fecha_min" required="Se necesita una fecha minima" />
+            <strong> Fecha máxima:</strong>  <input type="date" name="fecha_max" required="Se necesita una fecha máxima"/>
             <br/><br/>
            <strong>Lugar donde se perdió :    </strong> 
             <select name="lugar" id="lugar">
@@ -1068,7 +1060,7 @@ var dfClassicLayers = [{
          <strong><br/>Modelo bici:</strong> <input type="text" name="modelo" id="modelo" size="10" maxlength="35"/><br/>    
         </td>
         <td><br/><strong>Color bici</strong> (el que más predomina): <br/> <br/>
-
+    <input  checked type="radio" name="color" value="" />No lo sé<br/>
     <input type="radio" name="color" value="Rojo"/>Rojo<br/>
     <input type="radio" name="color" value="azul"/>Azul<br/>
     <input type="radio" name="color" value="negro"/>Negro<br/>
@@ -1090,7 +1082,7 @@ var dfClassicLayers = [{
 </select><br/>
 <br/><strong>Numero Serie:</strong>
 <input type="text" name="numeroserie" id="numeroserie" size="10" maxlength="15"/><br/><br/>
- <input type="submit" value="Enviar"/><br/><br/></td>
+ <input style="background-color:#90EE90" type="submit" value="Enviar"/><br/><br/></td>
         </td>
 </tr>
         
