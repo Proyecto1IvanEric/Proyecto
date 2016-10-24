@@ -15,4 +15,4 @@ Para poder visualizar nuestro sitio web debes de seguir unos pasos.
 6- No se pueden abrir los archivos "consulta.php" y "addanucio.php" de forma directa, primero habrá que realizar los formularios si no, no funcionara.
 
 
-Proyecto hecho Ivan y Eric.
+Proyecto hecho Ivan y Eric modificado para que haya un error.
